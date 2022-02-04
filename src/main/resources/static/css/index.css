@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+html { position: relative; min-height: 100%; margin: 0; }
+body { min-height: 100%; }
+#board_list { margin: 30px 0 150px; }
+.pointer { cursor: pointer; }

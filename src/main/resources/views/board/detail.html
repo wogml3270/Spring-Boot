@@ -1,0 +1,25 @@
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="temp/thymeleaf_layout">
+<head>
+    <meta charset="UTF-8">
+    <title>detail</title>
+    <script defer th:src="@{/js/board/detail.js}"></script>
+</head>
+<th:block layout:fragment="content">
+    <div id="board_detail"></div>
+    <div id="comment_form_container" th:if="${session.loginUser != null}">
+        <form onsubmit="return false;">
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="comment...">
+                </div>
+                <div class="col">
+                    <button type="button" name="comment_submit" class="btn btn-primary">전송</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="comment_list"></div>
+</th:block>
