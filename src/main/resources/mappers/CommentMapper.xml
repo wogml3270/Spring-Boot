@@ -3,8 +3,8 @@
 <mapper namespace="com.koreait.springbootboard.board.comment.CommentMapper">
     <insert id="insComment">
         INSERT INTO t_board_cmt
-        (icmt, iboard, iuser, ctnt, rdt, mdt)
+        (iboard, iuser, ctnt)
         VALUES
-        (${icmt}, ${iboard}, ${iuser}, #{ctnt}, #{rdt}, #{mdt})
+        (${iboard}, ${iuser}, #{ctnt})
     </insert>
 </mapper>

@@ -12,7 +12,6 @@ public class CommentRestController {
 
     @PostMapping
     public ResultVo insComment(@RequestBody BoardCommentEntity entity){
-        System.out.println(entity);
-        return null;
+        return service.insComment(entity);
     }
 }
