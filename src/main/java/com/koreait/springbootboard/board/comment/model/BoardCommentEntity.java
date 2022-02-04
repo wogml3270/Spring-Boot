@@ -12,5 +12,4 @@ public class BoardCommentEntity {
     private String ctnt;
     private String rdt;
     private String mdt;
-
 }
