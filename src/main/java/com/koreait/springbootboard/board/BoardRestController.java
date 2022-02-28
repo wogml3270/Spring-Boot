@@ -23,12 +23,6 @@ public class BoardRestController {
         return service.selBoardList(dto);
     }
 
-    @GetMapping("/detail/{iboard}")
-    public BoardVo selBoard(@PathVariable int iboard, BoardDto dto){
-        dto.setIboard(iboard);
-        return service.selBoard(dto);
-    }
-
     @GetMapping("/maxpage")
     public ResultVo selMaxPageVal(BoardDto dto){
         return service.selMaxPageVal(dto);

@@ -13,6 +13,12 @@
 <th:block layout:fragment="content">
     <div class="container">
     <h1>로그인</h1>
+        <div th:if="${param.error}" class="alert alert-denger" role="alert">
+            Invalid id and password.
+        </div>
+        <div th:if="${param.logout}" class="alert alert-primary" role="alert">
+            You have been logged out.
+        </div>
         <form novalidate id="login_frm" class="validation-form" method="post" th:action="@{/user/login}" th:object="${userEntity}">
             <div class="form-floating mb-3">
                 <input required type="text" class="form-control" placeholder="User Id" th:field="*{uid}">

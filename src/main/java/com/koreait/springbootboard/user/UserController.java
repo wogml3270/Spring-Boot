@@ -1,5 +1,6 @@
 package com.koreait.springbootboard.user;
 
+import com.koreait.springbootboard.board.model.BoardEntity;
 import com.koreait.springbootboard.user.model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,8 +18,9 @@ public class UserController {
     @Autowired private UserService service;
 
     @GetMapping("/login")
-    public void login(@ModelAttribute UserEntity userEntity) {
-
+    public void login(@ModelAttribute UserEntity entity) {
+        entity.setUid("eeee");
+        entity.setUpw("eeee");
     }
 
     @PostMapping("/login")
@@ -28,11 +30,6 @@ public class UserController {
         return "redirect:/";
     }
 
-    @GetMapping("/logout")
-    public String logoutProc(HttpSession hs) {
-        hs.invalidate();
-        return "redirect:/";
-    }
 
     @GetMapping("/join")
     public void join(@ModelAttribute UserEntity userEntity) {}
